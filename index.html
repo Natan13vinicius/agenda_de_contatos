@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de contato</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Libre+Baskerville:ital@1&family=Montserrat&family=Playfair+Display:wght@800&family=Poppins&family=Roboto:ital,wght@0,300;0,400;0,700;1,300&family=Syncopate&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>telefone</h2>
+
+            <h1>Agenda de contatos</h1>
+        </header>
+        <!-- form -->
+        <form action="" id="form-lista">
+            <input id="nome-contato" type="text" required placeholder="Nome do contato">
+            <!-- onkeyup="mascara" -->
+            <input id="telefone-contato" required placeholder="Numero do contato" type="text" name="telefone"
+                onkeyup="mascara( this, mtel );" maxlength="15" />
+
+
+            <!-- <input id="telefone-contato" type="tel" required placeholder="Numero do contato"> -->
+            <button type="submit">Cadastrar +</button>
+        </form>
+
+        <!-- table -->
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nome do contato</th>
+                    <th>Numero do contato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- <td>
+                        vinicius natan
+                    </td>
+
+                    <td>(11)93493-78379</td> -->
+                </tr>
+            </tbody>
+            <tfoot>
+                <!-- <tr>
+                    <td>digite o numero desta forma, 11 937379898</td>
+                </tr> -->
+            </tfoot>
+        </table>
+
+    </div>
+
+    <!-- js -->
+    <script src="/main.js"></script>
+</body>
+
+</html>
