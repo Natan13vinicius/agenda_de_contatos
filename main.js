@@ -10,7 +10,9 @@ const telefones = [];
 
 let nomeValido = false
 
-let linha = '<tr>'
+// let linha = '<tr>'
+let linha = ''; // Inicialize a variável linha como uma string vazia
+
 
 
 form.addEventListener('submit', function (e) {
@@ -38,7 +40,11 @@ form.addEventListener('submit', function (e) {
 
 function adicionarLinha() {
     // verifica se o nome esta correto
-
+    let validacao = nomeContatoInput.value.split(" ");
+    if (validacao.length < 2) {
+        alert('Por favor digite pelo menos o sobrenome do seu contato.')
+        return; // Saia da função se a validação falhar
+    }
     // enviar o valor de nomeContatoInput para array nomes
     nomes.push(nomeContatoInput.value)
     telefones.push(telefoneContatoInput.value)
